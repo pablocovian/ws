@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/* Orbit Container */
+.orbit-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+/* Center Core Icon */
+.center-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.center-icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* Orbit Circles */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(200, 200, 200, 0.4);
+  border-radius: 50%;
+}
+
+.inner-orbit {
+  width: 300px;
+  height: 300px;
+}
+
+.outer-orbit {
+  width: 450px;
+  height: 450px;
+}
+
+/* Orbiting Groups */
+.orbiting-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  animation: rotate 20s linear infinite;
+}
+
+.outer-group {
+  animation-duration: 30s;
+}
+
+/* Individual Logos */
+.orbiting-logo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Images Inside Logos */
+.orbiting-logo img {
+  width: 60%;
+  height: auto;
+}
+
+/* Position logos evenly spaced in a circular orbit */
+.orbiting-logo:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbiting-logo:nth-child(2) {
+  top: 85%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.orbiting-logo:nth-child(3) {
+  top: 85%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animation */
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
